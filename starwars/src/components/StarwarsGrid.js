@@ -1,23 +1,19 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios"
 import StarwarsCard from "./StarwarsCard";
+import styled from "styled-components";
 
-export default function StarwarsGrid() {
-const [currentChar, setCurrentChar] = useState([]);
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
 
-useEffect(() => { 
-    axios.get("https://swapi.co/api/people")
-    .then(response => {
-      setCurrentChar(response.data.results);
-    //   console.log(response.data.results)
-    });
-    }, []);
-
+export default function StarwarsGrid(props) {
     return(
-            <div>
-                {currentChar.map((element, index) => {
-                    // console.log(index);
-                    return <StarwarsCard key = {index} data = {currentChar[index]}/>
+            <Wrapper>
+                {props.data.map((element, index) => {
+                    return <StarwarsCard key = {index} data = {props.data[index]}/>
                 })};
-            </div>
+            </Wrapper>
 )}
