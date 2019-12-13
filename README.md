@@ -25,14 +25,23 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+    React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data easily. 
 
 - [ ] What does it mean to _think_ in react?
+    1. Break the UI into a component Hierarchy
+    2. Make a static version of his website
+    3. Identify The Minimal (but complete) Representation Of UI State
+    4. Identify Where Your State Should Live
+    5. Add Inverse Data Flow
 
 - [ ] Describe state.
+    An object that represents the parts of the app that can change.
 
 - [ ] Describe props.
+    A way of allowing data from parent components to be accessed by their child components
 
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+    Anything that affects something outside of the scope of the current function
 
 ## Project Set Up
 
